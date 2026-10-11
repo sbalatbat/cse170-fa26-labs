@@ -1,0 +1,38 @@
+root {
+    background-color: #FAF3EB;
+}
+
+section {
+    background-color: #E6CF8E;
+    border-color: aqua;
+    border-style: outset;
+    border-width: 1vmin;
+    border-radius: 1vh;
+    padding: 2vh;
+    margin: 1vh;
+    width: 47vw
+}
+
+h1 {
+    color: #39240E;
+    border-radius: 1vh;
+    padding: 2vh;
+    margin: 1vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h2,h3 {
+    color: #593916;
+}
+
+img {
+    width: 47vw;
+    float: right;
+    border-top-right-radius: 1vh;
+    border-bottom-left-radius: 1vh;
+}
+
+span {
+    color: #007575;
+    font-weight: bold;
+}
