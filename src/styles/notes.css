@@ -1,0 +1,36 @@
+:root {
+    --primary-bg: rgb(170, 178, 231);
+    --secondary-bg: rgb(150, 131, 181);
+    --primary-acc: rgb(47, 22, 70);
+    --secondary-acc: white;
+
+}
+
+body {
+    background-color: var(--primary-bg);
+}
+
+h1 {
+    color: var(--secondary-acc);
+    background-color: var(--primary-acc);
+    font-family: 'Nova Oval', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucid Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 2% 5% 2% 5%;
+    margin: 0%;
+}
+
+#blurb {
+    color: var(--primary-acc);
+    font-family: 'Ruluko', Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#service-description {
+    background-color: var(--secondary-bg);
+}
+
+p {
+    padding: 0% 5% 0% 5%;
+    font-family: 'Mandali', Verdana, Geneva, Tahoma, sans-serif;
+}
+
