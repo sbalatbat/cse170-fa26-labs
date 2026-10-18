@@ -3,7 +3,7 @@
     --secondary-bg: rgb(150, 131, 181);
     --primary-acc: rgb(47, 22, 70);
     --secondary-acc: white;
-
+    --neutral: rgb(84, 81, 115);
 }
 
 body {
@@ -30,7 +30,24 @@ h1 {
 }
 
 p {
+    font-family: 'Carme', Verdana, Geneva, Tahoma, sans-serif;
     padding: 0% 5% 0% 5%;
-    font-family: 'Mandali', Verdana, Geneva, Tahoma, sans-serif;
 }
 
+form {
+    font-family: 'Carme', Verdana, Geneva, Tahoma, sans-serif;
+    border: 1vmin dotted var(--primary-acc);
+    padding: 0% calc(5% - 1vmin) 0% calc(5% - 1vmin);
+}
+
+#post-msg {
+    color: var(--primary-acc);
+    background-color: var(--secondary-bg);
+    border: none;
+}
+
+#fineprint {
+    color: var(--neutral);
+    font-style: italic;
+    font-size: 0.75rem;
+}
