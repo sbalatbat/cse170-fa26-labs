@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Amarante&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ruslan+Display&display=swap');
+
+:root {
+    --primary-bg: rgb(40, 35, 47);
+    --secondary-bg: rgb(83, 22, 130);
+    --primary-acc: rgb(255, 179, 0);
+    --secondary-acc: white;
+}
+
+/* Remove default margin */
+*:not(dialog) {
+    margin: 0;
+}
+
+body {
+    color: var(--secondary-acc);
+    background-color: var(--primary-bg);
+    font-family: 'Roboto', 'Verdana', sans-serif;
+    font-size: 1rem;
+}
+
+h1 {
+    /* color */
+    color: var(--primary-acc);
+    background-color: var(--secondary-bg);
+    /* text font & align */
+    font-family: 'Ruslan Display', 'Arial', 'Verdana', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    /* spacing */
+    width: 100%;
+    padding: 2vh 2vh 2vh 2vh;
+    position: sticky;
+    top: 0;
+}
+
+img {
+    width: 100%;
+}
+
+h2 {
+    font-family: 'Amarante', 'Calibri', sans-serif;
+    font-size: 1.5rem;
+    padding: 2vh 2vh 2vh 2vh;
+}
+
+section {
+    display: grid;
+    gap: 2vh;
+    grid-template-columns: 1fr;
+}
+
+@media (width >= 390px) {
+    section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (width >= 810px) {
+    section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+figcaption {
+    text-align: center;
+    padding: 1vh 0vh 1vh 0vh;
+}
+
+footer {
+    color: var(--secondary-acc);
+    background-color: var(--secondary-bg);
+    text-align: center;
+    width: 100%;
+    padding: 2vh 2vh 2vh 2vh;
+}
