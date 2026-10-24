@@ -1,0 +1,68 @@
+:root {
+    --acc-purple: rgb(77, 7, 138);
+}
+
+/* Remove default margin */
+*:not(dialog) {
+    margin: 0;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        "head head head head"
+        "main main main nav"
+        "foot foot foot foot"
+}
+
+header, footer {
+        width: 100%;
+        padding: 1vh 2vh 1vh 2vh;
+        box-sizing: border-box;
+}
+
+header {
+    grid-area: head;
+    color: white;
+    background-color: var(--acc-purple);
+    width: 100%;
+}
+
+header h1 {
+    float: left;
+}
+
+.left-anchor {
+    float: right;
+}
+
+main {
+    padding: 2vh 2vh 2vh 2vh;
+}
+
+nav {
+    grid-area: nav;
+    padding: 2vh 2vh 2vh 2vh;
+}
+
+nav ul li {
+    margin-bottom: 2vh;
+}
+
+main {
+    grid-area: main;
+}
+
+section {
+    margin-bottom: 2vh;
+}
+
+footer {
+    grid-area: foot;
+    background-color: var(--acc-purple);
+    color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
