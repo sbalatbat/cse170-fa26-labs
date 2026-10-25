@@ -51,6 +51,7 @@ h1 {
 
     /* text font & align */
     font-family: 'Magier Schrift', 'Castellar', Georgia, 'Times New Roman', Times, serif;
+    font-size: 3rem;
     text-align: center;
     
     /* spacing */
@@ -110,10 +111,10 @@ button {
         0 8px 0 var(--primary-acc);
     border-radius: 99999px;
     transition: box-shadow 0.2s, border 0.1s;
+}
 
-    &:is(#transfigure) + p {
-        visibility: hidden;
-    }
+#transfigure ~ p {
+    visibility: hidden;
 }
 
 button:hover {
@@ -123,11 +124,12 @@ button:hover {
     background-position-x: 100%;
     animation: shimmer 1s 10 linear;
     border: solid 2px transparent;
-    &:is(#transfigure) + p {
-        visibility: visible;
-        color: var(--secondary-acc);
-    }
 } 
+
+#transfigure:hover ~ p {
+    visibility: visible;
+    color: var(--secondary-acc);
+}
 
 button:active {
     box-shadow: none;
@@ -139,8 +141,8 @@ p {
 }
 
 .star {
-        width: 5vw;
-    }
+    width: 10vw;
+}
 
 img {
     width: 100%;
@@ -149,7 +151,7 @@ img {
 }
 
 img:hover {
-    filter: drop-shadow(0 0 1rem var(--primary-acc));
+    filter: drop-shadow(0 0 2rem var(--primary-acc));
 }
 
 a {
