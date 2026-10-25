@@ -1,0 +1,106 @@
+@keyframes shimmer {
+    to {
+        background-position-x: 0%
+    }
+}
+
+:root {
+    --primary-bg: rgb(40, 35, 47);
+    --secondary-bg: rgb(68, 7, 114);
+    --primary-acc: rgb(255, 207, 33);
+    --secondary-acc: white;
+
+    --primary-acc-glimmer: rgb(250, 237, 136);
+}
+
+/* Remove default margin */
+*:not(dialog) {
+    margin: 0;
+}
+
+body {
+    /* color */
+    color: var(--secondary-acc);
+    background: linear-gradient(var(--primary-bg), var(--secondary-bg));
+
+    /* text font & align */
+    
+    /* spacing */
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+
+    /* border */
+    border: 1vmin dotted var(--primary-acc);
+}
+
+h1 {
+    /* color */
+    color: var(--primary-acc);
+
+    /* text font & align */
+    
+    /* spacing */
+    width: 100%;
+    padding: 2vh 2vh 2vh 2vh;
+    position: sticky;
+    top: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    padding: 2vh 2vh 2vh 2vh;
+    display: grid;
+    gap: 2vh;
+}
+
+section {
+    width: 100%;
+}
+
+button {
+    /* color */
+    color: var(--secondary-acc);
+    background-color: var(--primary-bg);
+
+    /* text font & align */
+    font-weight: bold;
+    text-decoration: none;
+
+    /* spacing */
+    width: 7rem;
+    padding: 1em;
+
+    /* border */
+    border: solid 2px var(--primary-acc);
+    box-shadow:
+        0 1px 0 var(--primary-acc),
+        0 2px 0 var(--primary-acc),
+        0 3px 0 var(--primary-acc),
+        0 4px 0 var(--primary-acc),
+        0 5px 0 var(--primary-acc),
+        0 6px 0 var(--primary-acc),
+        0 7px 0 var(--primary-acc),
+        0 8px 0 var(--primary-acc);
+    border-radius: 99999px;
+    transition: box-shadow 0.2s, border 0.1s;
+}
+
+button:hover {
+    color: var(--secondary-bg);
+    background: linear-gradient(-45deg, var(--primary-acc) 30%, var(--primary-acc-glimmer) 50%, var(--primary-acc) 70%);
+    background-size: 300%;
+    background-position-x: 100%;
+    animation: shimmer 1s 10 linear;
+    border: solid 2px transparent;
+} 
+
+button:active {
+    box-shadow: none;
+}
+
+p {
+    display: inline-block;
+    padding: 0vh 2vh 0vh 2vh;
+}

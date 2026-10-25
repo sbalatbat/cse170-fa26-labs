@@ -18,9 +18,9 @@ body {
 }
 
 header, footer {
-        width: 100%;
-        padding: 1vh 2vh 1vh 2vh;
-        box-sizing: border-box;
+    width: 100%;
+    padding: 1vh 2vh 1vh 2vh;
+    box-sizing: border-box;
 }
 
 header {
@@ -67,7 +67,7 @@ section {
 }
 
 details {
-    overflow: auto;
+    display: block;
 }
 
 footer {
