@@ -4,13 +4,22 @@
     }
 }
 
+@font-face {
+    font-family: "Magier Schrift";
+    src: url(magier-schrift-font/MagierSchrift-GO68g.ttf);
+}
+@font-face {
+    font-family: "Magier Schrift Solid";
+    src: url(magier-schrift-font/MagierSchriftSolid-JRWMM.ttf);
+}
+
 :root {
-    --primary-bg: rgb(40, 35, 47);
-    --secondary-bg: rgb(68, 7, 114);
-    --primary-acc: rgb(255, 207, 33);
+    --primary-bg: rgba(40, 35, 47, 1);
+    --secondary-bg: rgba(68, 7, 114, 1);
+    --primary-acc: rgba(255, 207, 33, 1);
     --secondary-acc: white;
 
-    --primary-acc-glimmer: rgb(250, 237, 136);
+    --primary-acc-glimmer: rgba(250, 237, 136, 1);
 }
 
 /* Remove default margin */
@@ -39,6 +48,8 @@ h1 {
     color: var(--primary-acc);
 
     /* text font & align */
+    font-family: 'Magier Schrift', 'Castellar', Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
     
     /* spacing */
     width: 100%;
@@ -52,11 +63,21 @@ main {
     width: 100%;
     padding: 2vh 2vh 2vh 2vh;
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2vh;
 }
 
 section {
     width: 100%;
+    div {
+        display: flex;
+        align-items: center;
+    }
+}
+
+subscript {
+    font-size: 0.8rem;
+    visibility: hidden;
 }
 
 button {
@@ -85,6 +106,10 @@ button {
         0 8px 0 var(--primary-acc);
     border-radius: 99999px;
     transition: box-shadow 0.2s, border 0.1s;
+
+    &:is(#transfigure) + p {
+        visibility: hidden;
+    }
 }
 
 button:hover {
@@ -94,6 +119,10 @@ button:hover {
     background-position-x: 100%;
     animation: shimmer 1s 10 linear;
     border: solid 2px transparent;
+    &:is(#transfigure) + p {
+        visibility: visible;
+        color: var(--secondary-acc);
+    }
 } 
 
 button:active {
@@ -103,4 +132,20 @@ button:active {
 p {
     display: inline-block;
     padding: 0vh 2vh 0vh 2vh;
+}
+
+img {
+    padding: 5min;
+    box-sizing: border-box;
+}
+
+img:hover {
+    /* background: radial-gradient(
+        circle at 50% 50%,
+        var(--secondary-acc) 0%
+        var(--primary-acc-glimmer) 83%,
+        var(--primary-acc) 95%,
+        transparent 100%
+    ); */
+    filter: drop-shadow(0 0 1rem var(--primary-acc));
 }
