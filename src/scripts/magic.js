@@ -13,6 +13,11 @@ const colors = [
     "#FFABA4", "#FFBE89", "#FFF18A", "#CCFF8A", "#8AF5FF",
     "#C4A9FF", "#FFBAF9"
 ]
+const pleas = [
+    "Please! Have mercy on me please!", "Get me out of here!",
+    "Please turn me back!", "No! Back to my real self!", "Please!",
+    "I'm begging you!"
+];
 // game logic states
 const ninePlusTen = 21;
 let clicks = 0;
@@ -119,6 +124,7 @@ function starExplosion(clickEvent) {
 document.addEventListener('DOMContentLoaded', function() {
     let magicWordIdx = 0;
     let colorIdx = 0;
+    let pleaIdx = 0;
     let originalForm = true;
     let transfigContainer = transfigBtn.parentNode.querySelector("p");
 
@@ -158,6 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let newForm;
         if (originalForm) {
             transfigContainer.remove();
+            pleaIdx = (1 + pleaIdx) % pleas.length;
             newForm = document.createElement("img");
             newForm.src = "media/merp-ball.png"
             transfigSection.appendChild(newForm);
@@ -166,6 +173,8 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             newForm = transfigSection.querySelector("img");
             newForm.remove();
+            transfigContainer = document.createElement("p");
+            transfigContainer.innerText = pleas[pleaIdx];
             transfigSection.appendChild(transfigContainer);
             originalForm = true;
             transfigSection.style.setProperty("align-items", "center");
