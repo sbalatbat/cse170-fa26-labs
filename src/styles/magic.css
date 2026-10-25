@@ -138,6 +138,10 @@ p {
     padding: 0vh 2vh 0vh 2vh;
 }
 
+.star {
+        width: 5vw;
+    }
+
 img {
     width: 100%;
     padding: 5min;
@@ -157,3 +161,41 @@ a {
     box-sizing: border-box;
     text-align: center;
 }
+
+.star {
+    transform: translate(-50%);
+}
+
+.star-1 {
+    animation: anim1 1s 0.1s ease-in forwards;
+}
+
+@keyframes anim1 {
+    to {
+        transform: translateY(500px) scale(0.2);
+        opacity: 0;
+    }
+}
+
+.star-2 {
+    animation: anim2 1s 0.2s ease-in forwards;
+}
+
+@keyframes anim2 {
+    to {
+        transform: translateY(800px) scale(0.6);
+        opacity: 0;
+    }
+}
+
+.star-3 {
+    animation: anim3 1s 0.3s ease-in forwards;
+}
+
+@keyframes anim3 {
+    to {
+        transform: translateY(400px) scale(0.3);
+        opacity: 0;
+    }
+}
+
