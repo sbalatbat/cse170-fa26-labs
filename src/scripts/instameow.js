@@ -1,13 +1,15 @@
 const imageURLs = [
-    "https://64.media.tumblr.com/4aef6c34e6b445d992ecc2d8847c43b1/1d2644683a6afe5d-66/s400x600/6aee96a645e94d82ab6663d8efda4ad34f5ced9c.png",
-    "https://64.media.tumblr.com/0471047733fb595fa7029e63861ea74b/0d54cc9e0b18629e-56/s1280x1920/feea2bd31cb536cccf427b459309395adbc0fbb2.png",
-    "https://64.media.tumblr.com/40861a2784652df208202bf1972eef0c/f98f8bca8302bead-3d/s2048x3072/ab9da0864686b98a35633cbef9b3a2e556765e6b.png"
+    "media/pixel-merp.png",
+    "media/bingbong.png",
+    "media/teamnatsu.png"
 ];
 const altTexts = [
     "Pixel art of a black cat with a purple collar and golden eyes.",
     "An ominous reflective Bing Bong from video game 'Peak' levitating a red and purple cube.",
     "Fairy Tail characters Natsu, Gray, Happy, and Erza drawn as if in photos during a beach day."
 ];
+const likeOff = "icons/paw-heart.png";
+const likeOn = "icons/paw-heart-fill.png";
 
 const imgOne = document.createElement("img");
 imgOne.classList.add("carousel");
@@ -27,7 +29,7 @@ const carouselImg = document.getElementsByClassName("carousel")[0];
 const carouselDiv = carouselImg.parentElement;
 const prevBtn = document.getElementsByClassName("prev")[0];
 const nextBtn = document.getElementsByClassName("next")[0];
-
+const likeBtn = document.getElementsByClassName("like-btn")[0];
 let carouselIdx = 0;
 let numSlides = 3;
 
@@ -45,6 +47,7 @@ function swapImg() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
+    let likeActive = false;
 
     prevBtn.addEventListener("click", function() {
         prev();
@@ -54,4 +57,18 @@ document.addEventListener("DOMContentLoaded", function() {
         next();
         swapImg();
     });
+    carouselDiv.addEventListener("swipeleft", function() {
+        next();
+        swapImg();
+    });
+    likeBtn.addEventListener("click", function() {
+        if (!likeActive) {
+            likeActive = true;
+            likeBtn.src = likeOn;
+        } else {
+            likeActive = false;
+            likeBtn.src = likeOff;
+        }
+    })
+
 });

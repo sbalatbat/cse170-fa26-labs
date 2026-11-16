@@ -65,13 +65,13 @@ main {
     width: 100%;
     height: 70px;
     background: #fff;
-    border: 1px solid #dfdfdf;
     margin-top: 0px;
 }
 
 .info {
     width: 100%;
     height: 60px;
+    background-color: #000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -81,7 +81,7 @@ main {
 .info .username {
     width: auto;
     font-weight: bold;
-    color: #000;
+    color: #fff;
     font-size: 14px;
     margin-left: 10px;
 }
@@ -103,8 +103,8 @@ main {
 }
 
 .like-btn {
-    width:20px;
-    height: 20px;
+    width:24px;
+    height: 24px;
 }
 
 .post-content {
@@ -136,7 +136,7 @@ main {
 
 .carousel {
     width:100%;
-    height: 300px;
+    height: 500px;
     object-fit: contain;
 }
 

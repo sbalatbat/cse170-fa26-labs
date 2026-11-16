@@ -1,3 +1,6 @@
+/* submission for lab 7
+ * change html script src to /scripts/lab7.js for this functionality
+ */
 const imageURLs = [
     "https://64.media.tumblr.com/4aef6c34e6b445d992ecc2d8847c43b1/1d2644683a6afe5d-66/s400x600/6aee96a645e94d82ab6663d8efda4ad34f5ced9c.png",
     "https://64.media.tumblr.com/0471047733fb595fa7029e63861ea74b/0d54cc9e0b18629e-56/s1280x1920/feea2bd31cb536cccf427b459309395adbc0fbb2.png",
