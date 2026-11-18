@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign Up | Instameow by merp</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Sign up to Instameow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="merp">
+        <link rel="stylesheet" href="styles/signup.css">
+        <!-- Web Dev Lab 8 -->
+    </head>
+    <body>
+        <header>
+            <img src="icons/paw.png">
+            <h1>Instameow</h1>
+            <img src="icons/scopic-lines.png">
+        </header>
+        <main>
+            <h2>Register</h2>
+            
+            <!-- Form -->
+            <form id="signup-form">
+                <label for="username">Choose a username</label> 
+                <input id="username"> 
+                <p id="warning" class="hidden"></p>
+            </form>
+            
+            <!-- Additional information to collect only if username is available -->
+            <form id="next-steps" class="hidden">
+                <label for="phone">Phone number</label> 
+                <input id="phone"> 
+                <label for="fullname">Name</label> 
+                <input id="fullname"> 
+                <button type="submit">Submit</button>  
+            </form>
+          
+        </main>
+        <script src="scripts/signup.js"></script>
+    </body>
+</html>

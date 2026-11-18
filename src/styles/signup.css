@@ -1,0 +1,59 @@
+@font-face {
+  /*
+   * Source: https://www.fontspace.com/hug-me-tight-font-f18800
+   * Author: Misti Hammers
+   */
+  font-family: "Hug Me Tight";
+  src: url(../fonts/HugMeTight.ttf);
+}
+
+:root {
+  --platform-font: "Hug Me Tight";
+}
+
+* { 
+  box-sizing: border-box; 
+  font-family: sans-serif; 
+}
+
+main, header { 
+  max-width: 25rem; 
+  margin: 2rem auto; 
+  padding: 0 1rem; 
+}
+
+header {
+  display: flex;
+}
+
+img {
+  width: 3rem;
+  height: 3rem;
+}
+
+h1 {
+  font-family: var(--platform-font), 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+input { 
+  width: 100%; 
+  padding: .5rem; 
+  margin: .5rem 0 .75rem; 
+}
+
+button { 
+  padding: .5rem .75rem; 
+}
+
+.hidden { 
+  display: none; 
+}
+
+#warning.checking{
+  color:black;
+}
+
+#warning {
+  color:red;
+  font-size:small;
+}

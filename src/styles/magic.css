@@ -5,12 +5,16 @@
 }
 
 @font-face {
+    /*
+     * Source: https://www.fontspace.com/magier-schrift-font-f48413
+     * Author: Misti Hammers
+     */
     font-family: "Magier Schrift";
-    src: url(magier-schrift-font/MagierSchrift-GO68g.ttf);
+    src: url(../fonts/magier-schrift/MagierSchrift-GO68g.ttf);
 }
 @font-face {
     font-family: "Magier Schrift Solid";
-    src: url(magier-schrift-font/MagierSchriftSolid-JRWMM.ttf);
+    src: url(../fonts/magier-schrift/MagierSchriftSolid-JRWMM.ttf);
 }
 
 :root {
