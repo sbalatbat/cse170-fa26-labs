@@ -23,12 +23,15 @@ let nextSteps = document.querySelector("#next-steps");
 function showWarningEmpty() {
   // Once completed, a warning should be visible, and the text should read: "You can use letters, numbers, and symbols"
   warning.innerText = "You can use letters, numbers, and symbols";
-  warning.classList.remove("hidden");
+  if (warning.classList.length > 0) {
+    warning.classList.remove("hidden");
+  }
 }
 
 function showChecking() {
   // Once completed, the "warning" text should say "Checking availability..."
- 
+  warning.innerText = "Checking availability...";
+  warning.classList.remove("hidden");
 }
 
 function showWarningUnavailable() {
@@ -46,6 +49,9 @@ function hideNextSteps(){
 
 function hideWarning() {
   // Any warnings should be removed as soon as they are not needed (i.e., if the warning does not apply).
+  warning.innerText = "";
+  if (warning.classList.length == 0)
+    warning.classList.add("hidden");
 }
 
 function checkEmpty(){
@@ -68,6 +74,13 @@ async function checkName() {
 // Add any event listeners here
 document.addEventListener("DOMContentLoaded", function() {
   username.addEventListener("focus", function() {
+    checkEmpty();
+  });
+  username.addEventListener("blur", function() {
+    hideWarning();
+  });
+  username.addEventListener("input", function() {
+    showChecking();
     checkEmpty();
   });
 });
