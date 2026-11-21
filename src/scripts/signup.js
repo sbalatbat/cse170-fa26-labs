@@ -6,6 +6,7 @@ function fakeUsernameCheck(name) {
       const taken = ["admin", "test", "guest"];
       const available = 
             !taken.includes(name.toLowerCase());
+      // console.log(`available: ${available}`);
       resolve(available);
     }, 2000); // Waits 2 seconds to simulate a backend call
   });
@@ -36,14 +37,17 @@ function showChecking() {
 
 function showWarningUnavailable() {
   // Once completed, the "warning" text should say "This username is not available"
-
+  warning.innerText = "This username is not available";
+  warning.classList.remove("hidden");
 }
 
 // Initially, the next-steps form (which collects additional information only if the user name is available) should be invisible. You should decide when it is made visible (and how). 
 function showNextSteps() {
+  nextSteps.classList.remove("hidden");
 }
 
 function hideNextSteps(){
+  nextSteps.classList.add("hidden");
 }
 
 
@@ -65,10 +69,16 @@ function checkEmpty(){
 
 // Create an function that uses the fakeUserNameCheck function to see if the username the person typed is available (We provide that line). If it is, show the rest of the form (the next steps) for the user to complete, otherwise provide a warning that it is unavailable.
 async function checkName() {
-    
-      let available = await fakeUsernameCheck(name);
-      // this will return "True" if the name is available, "False" otherwise.
-    
+  let name = username.value;
+  let available = await fakeUsernameCheck(name);
+  // this will return "True" if the name is available, "False" otherwise.
+  if (available) {
+    hideWarning();
+    showNextSteps();
+  } else {
+    showWarningUnavailable();
+    hideNextSteps();
+  }
 }
 
 // Add any event listeners here
@@ -80,7 +90,9 @@ document.addEventListener("DOMContentLoaded", function() {
     hideWarning();
   });
   username.addEventListener("input", function() {
+    console.log("input changed");
     showChecking();
     checkEmpty();
+    checkName()
   });
 });
