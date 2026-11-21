@@ -9,26 +9,55 @@
 
 :root {
   --platform-font: "Hug Me Tight";
+  --background: #a26c3e;
 }
 
 * { 
+  margin: 0;
+  padding: 0;
   box-sizing: border-box; 
   font-family: sans-serif; 
 }
 
+body {
+  background-color: var(--background);
+}
+
+body, main {
+  width: 100%;
+}
+
 main, header { 
-  max-width: 25rem; 
   margin: 2rem auto; 
-  padding: 0 1rem; 
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 header {
+  background-color: white;
+  height: 5rem;
   display: flex;
+  align-items: center;
 }
 
-img {
+#register {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 2rem;
+  max-width: 25rem;
+  align-self: center;
+}
+
+.icon {
   width: 3rem;
   height: 3rem;
+}
+
+#cat {
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
 
 h1 {

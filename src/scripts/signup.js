@@ -47,7 +47,9 @@ function showNextSteps() {
 }
 
 function hideNextSteps(){
-  nextSteps.classList.add("hidden");
+  if (nextSteps.classList.length == 0) {
+    nextSteps.classList.add("hidden");
+  }
 }
 
 
@@ -64,6 +66,7 @@ function checkEmpty(){
   // If not, it should show the appropriate warning
   if (name.length == 0) {
     showWarningEmpty();
+    hideNextSteps();
   }
 };
 
@@ -72,7 +75,7 @@ async function checkName() {
   let name = username.value;
   let available = await fakeUsernameCheck(name);
   // this will return "True" if the name is available, "False" otherwise.
-  if (available) {
+  if (available && name.length > 0) {
     hideWarning();
     showNextSteps();
   } else {
@@ -93,6 +96,6 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log("input changed");
     showChecking();
     checkEmpty();
-    checkName()
+    checkName();
   });
 });

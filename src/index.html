@@ -6,35 +6,38 @@
         <meta name="description" content="Sign up to Instameow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="merp">
-        <link rel="stylesheet" href="signup.css">
+        <link rel="stylesheet" href="styles/signup.css">
         <!-- Web Dev Lab 8 -->
     </head>
     <body>
         <header>
-            <img src="icons/paw.png">
+            <img class="icon" src="icons/paw.png">
             <h1>Instameow</h1>
-            <img src="icons/scopic-lines.png">
+            <img class="icon" src="icons/scopic-lines.png">
         </header>
         <main>
-            <h2>Register</h2>
-            
-            <!-- Form -->
-            <form id="signup-form">
-                <label for="username">Choose a username</label> 
-                <input id="username" name="username"> 
-                <p id="warning" class="hidden"></p>
-            </form>
-            
-            <!-- Additional information to collect only if username is available -->
-            <form id="next-steps" class="hidden">
-                <label for="phone">Phone number</label> 
-                <input id="phone" name="phone"> 
-                <label for="fullname">Name</label> 
-                <input id="fullname" name="fullname"> 
-                <button type="submit">Submit</button>  
-            </form>
-          
+            <img id="cat" src="media/cat.png">
+            <section id="register">
+                <h2>Register</h2>
+                
+                <!-- Form -->
+                <form id="signup-form">
+                    <label for="username">Choose a username</label> 
+                    <input id="username" name="username"> 
+                    <p id="warning" class="hidden"></p>
+                </form>
+                
+                <!-- Additional information to collect only if username is available -->
+                <form id="next-steps" class="hidden">
+                    <label for="phone">Phone number</label> 
+                    <input id="phone" name="phone"> 
+                    <label for="fullname">Name</label> 
+                    <input id="fullname" name="fullname"> 
+                    <button type="submit">Submit</button>  
+                </form>
+            </section>
+            <img class="background">
         </main>
-        <script src="signup.js"></script>
+        <script src="scripts/signup.js"></script>
     </body>
 </html>
